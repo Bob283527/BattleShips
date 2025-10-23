@@ -4,7 +4,13 @@ public class Board {
 	//creating prvate char arrays for both players
 	private char[][] player1Board;
 	private char[][] player2Board;
-	
+	public int carrierPoint = 5;
+	public int battleshipPoint = 4;
+	public int cruiserPoint = 3;
+	public int submarinePoint = 3;
+	public int destroyerPoint = 2;
+
+
 	public Board() {
 		//creates the board as a 10x10 using the previously made char arrays\
 	//for readability and if i wanna create a new board with diff sizes of cells
@@ -45,14 +51,15 @@ public class Board {
 			player1BoardStr += "\n";
 			player2BoardStr += "\n";
 			}
-			return player1BoardStr + "\n" + player1BoardStr;
+			return player1BoardStr + "\n" + player2BoardStr;
 			
 			}
-			//tester method for testing type 
-		public static void main(String[] args) {
-			Board testBoard = new Board();
-			System.out.println(testBoard);
+			
+			//Method for diff types of ships
+		public void Ships() {
+			
 		}
+		
 }
 
 
