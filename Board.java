@@ -4,6 +4,8 @@ public class Board {
 	//creating prvate char arrays for both players
 	private char[][] player1Board;
 	private char[][] player2Board;
+	
+	//ship lengths
 	public int carrierPoint = 5;
 	public int battleshipPoint = 4;
 	public int cruiserPoint = 3;
@@ -56,8 +58,32 @@ public class Board {
 			}
 			
 			//Method for diff types of ships
-		public void Ships() {
-			
+		public void placeShips() {
+			/*
+			 * For each ship ask the user for the row letter and column number
+			 * ask for Horizontal and Vertical positions
+			 * Convert row letter to number
+			 * get ship length based on ship type used from the vars above
+			 * check if ship placement is inside the board
+			 * check if cells already have a ship inside
+			 * if invaluid then show msg for user and reprompt them
+			 * if valid then fill cells with S for ship
+			 * Repeat until all ships placed myb eloop prob 
+			 * print board to confirm placements after each input from user then print final board after confirming one last time
+			 * 
+			 * starting code I have rgiht now:
+			 * Scanner scan = new Scanner(System.in);
+			 * for (int i = 0; i < 6; i++) { 5 ships so i use 6
+			 * 	System.out.println("Enter row letter (A-J): ");
+			 * 	char rowChar = scan.nextLine(); //check for upercase o rlowercase later
+			 * 	System.out.println("Enter column num (1-10): ");
+			 * 	int colNum = scan.next();
+			 * 	System.out.println("Horizontal (H) or Vertical (V)? : ");
+			 *  char dirChar = scan.next();
+			 * 
+			 * have to convert letter to num
+			 * need to get ship len from vars above
+			 * need a boundary check
 		}
 		
 }
